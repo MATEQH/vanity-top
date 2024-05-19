@@ -2,15 +2,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const App = () => {
+  // Declare state variables to indicate loading
   const [loadingDates, setLoadingDates] = useState(true);
   const [loadingPlayers, setLoadingPlayers] = useState(true);
 
+  // Declare state variables to store
   const [dates, setDates] = useState([]);
   const [currentDate, setCurrentDate] = useState("global");
   const [count, setCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [players, setPlayers] = useState([]);
 
+  // Function to fetch dates from the server
   const getDates = async () => {
     try {
       setLoadingDates(true);
@@ -27,6 +30,7 @@ const App = () => {
     getDates();
   }, []);
 
+  // Function to fetch players from the server
   const getPlayers = async () => {
     try {
       setLoadingPlayers(true);
@@ -48,6 +52,7 @@ const App = () => {
     getPlayers();
   }, [currentPage, currentDate]);
 
+  // Function to fetch the total player count from the server based on the current date
   const getCount = async () => {
     try {
       //setLoadingCount(true);
@@ -66,12 +71,15 @@ const App = () => {
     getCount();
   }, [currentDate]);
 
+  // Calculate total number of pages
   const totalPages = Math.ceil(count / 10);
 
+  // Function to navigate to previous page
   const prevPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
+  // Function to navigate to next page
   const nextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
