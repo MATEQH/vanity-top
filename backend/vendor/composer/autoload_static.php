@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit64f3a24a79399933a23a75504f156154
+class ComposerStaticInit5515633d30d2cf69f361a41ed4050dfe
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -25,7 +25,6 @@ class ComposerStaticInit64f3a24a79399933a23a75504f156154
         'M' => 
         array (
             'MongoDB\\' => 8,
-            'Matthew\\Htdocs\\' => 15,
         ),
     );
 
@@ -46,10 +45,6 @@ class ComposerStaticInit64f3a24a79399933a23a75504f156154
         array (
             0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
         ),
-        'Matthew\\Htdocs\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
     );
 
     public static $classMap = array (
@@ -66,9 +61,9 @@ class ComposerStaticInit64f3a24a79399933a23a75504f156154
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit64f3a24a79399933a23a75504f156154::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit64f3a24a79399933a23a75504f156154::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit64f3a24a79399933a23a75504f156154::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5515633d30d2cf69f361a41ed4050dfe::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5515633d30d2cf69f361a41ed4050dfe::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit5515633d30d2cf69f361a41ed4050dfe::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,0 +1,7 @@
+{
+    "name": "vanity/backend",
+    "type": "project",
+    "require": {
+        "mongodb/mongodb": "^1.19"
+    }
+}
