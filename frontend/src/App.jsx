@@ -17,7 +17,7 @@ const App = () => {
   const getDates = async () => {
     try {
       setLoadingDates(true);
-      const response = await axios.get("https://mateqh.site/vanity-api/");
+      const response = await axios.get("https://mateqh.site/vanity/api/");
       setDates(response.data);
     } catch (err) {
       setDates([]);
@@ -35,7 +35,7 @@ const App = () => {
     try {
       setLoadingPlayers(true);
       const response = await axios.get(
-        "https://mateqh.site/vanity-api/?date=" +
+        "https://mateqh.site/vanity/api/?date=" +
           currentDate +
           "&page=" +
           currentPage
@@ -57,7 +57,7 @@ const App = () => {
     try {
       //setLoadingCount(true);
       const response = await axios.get(
-        "https://mateqh.site/vanity-api/?date=" + currentDate
+        "https://mateqh.site/vanity/api/?date=" + currentDate
       );
       setCount(response.data.count);
     } catch (err) {

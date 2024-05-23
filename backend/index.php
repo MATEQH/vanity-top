@@ -127,6 +127,16 @@ if (isset($_GET['date'])) {
             echo json_encode($results);
         }
     }
+} else {
+    $results = ['global'];
+
+    $cursor = $killsCollection->find([], ['projection' => ['_id' => 1], 'sort' => ['_id' => -1]]);
+
+    foreach ($cursor as $document) {
+        $results[] = $document['_id'];
+    }
+
+    echo json_encode($results);
 }
 
 ?>
